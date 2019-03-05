@@ -1,0 +1,7 @@
+.env
+db
+log
+app/*
+!app/wp-content
+app/wp-content/*
+!app/wp-content/plugins

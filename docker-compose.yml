@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  wordpress:
+    image: wordpress:5.1-php7.2-fpm
+    depends_on:
+      - db
+    env_file: .env
+    volumes:
+      - ./app:/var/www/html
+      # - ./app/wp-config.php:/var/www/html/wp-config.php
+      # - ./app/wp-content/plugins:/var/www/html/wp-content/plugins
+  nginx:
+    image: nginx:1.15.6-alpine
+    ports:
+      - '8080:80'
+      - '9090:90'
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./log:/var/log/nginx
+      - ./web:/var/www/web
+    depends_on:
+      - wordpress
+    volumes_from:
+      - wordpress
+
+  db:
+    image: mariadb:latest
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./db:/var/lib/mysql
+    env_file: .env
