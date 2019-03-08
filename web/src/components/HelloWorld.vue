@@ -7,6 +7,7 @@
         <time>{{ data.date }}</time>
       </li>
     </ul>
+    <input v-model="getCount" type="number" />
   </div>
 </template>
 
@@ -33,7 +34,8 @@ export default {
   },
   data() {
     return {
-      posts: []
+      posts: [],
+      getCount: 1
     }
   },
   computed: {
@@ -46,8 +48,10 @@ export default {
   apollo: {
     posts: {
       query: getPosts,
-      variables: {
-        counts: 10
+      variables() {
+        return {
+          counts: this.getCount
+        }
       }
     }
   }
