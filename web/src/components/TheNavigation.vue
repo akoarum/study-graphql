@@ -25,10 +25,10 @@ export default {}
       line-height: 1;
       text-decoration: none;
       color: #fff;
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
 
       &:hover {
-        opacity: .8;
+        opacity: 0.8;
       }
     }
   }

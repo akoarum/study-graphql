@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>wp-graphqlを使用したGraphQLのお試しページです。</p>
+    <p class="lead">wp-graphqlを使用したGraphQLのお試しページです。</p>
   </div>
 </template>
 
@@ -11,4 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.lead {
+  font-size: 1.8rem;
+}
 </style>

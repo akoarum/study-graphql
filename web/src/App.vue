@@ -10,7 +10,6 @@
 <script>
 import gql from 'graphql-tag'
 import TheHeader from './components/TheHeader'
-import Posts from './components/Posts'
 
 const getPosts = gql`
   query GET_POSTS($counts: Int) {
@@ -28,7 +27,7 @@ const getPosts = gql`
 
 export default {
   name: 'App',
-  components: { TheHeader, Posts },
+  components: { TheHeader },
   data() {
     return {
       posts: []
@@ -74,7 +73,9 @@ canvas {
 }
 
 html {
-  font-family: "Lato", "Yu Gothic", YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic Std", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Yu Gothic', YuGothic, 'Hiragino Sans',
+    'Hiragino Kaku Gothic Std', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック',
+    'MS PGothic', Helvetica, Arial, sans-serif;
   font-size: 62.5%;
   color: #242424;
 }
@@ -82,7 +83,7 @@ html {
 body {
   margin: 0;
   font-feature-settings: 'pkna';
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   line-height: 1.6;
 }
 
@@ -100,7 +101,8 @@ p {
   font-size: 1.5rem;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
@@ -168,13 +170,12 @@ sub {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
-
 
 img,
 svg {
@@ -197,11 +198,6 @@ figure {
   margin: 0;
   padding: 0;
 }
-
-
-// ==============================
-// Forms
-// ==============================
 
 fieldset {
   border: none;
@@ -233,7 +229,7 @@ textarea {
 }
 
 button,
-input[type="submit"],
+input[type='submit'],
 label {
   cursor: pointer;
 }
@@ -249,9 +245,9 @@ select {
 }
 
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
+html [type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -263,44 +259,44 @@ button {
 }
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   display: none;
 }
 
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 ::-webkit-input-placeholder {
   color: inherit;
-  opacity: .54;
+  opacity: 0.54;
 }
 
 .appContent {

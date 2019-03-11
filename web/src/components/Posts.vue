@@ -2,8 +2,8 @@
   <div class="posts">
     <PostItem
       v-for="post in posts"
-      :key="post.id"
       :id="post.id"
+      :key="post.id"
       :title="post.title"
       :date="post.date"
       class="posts__item"

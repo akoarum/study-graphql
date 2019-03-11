@@ -1,6 +1,8 @@
 <template>
   <header class="header">
-    <h1 class="header__logo"><router-link :to="'/'"><Logo /></router-link></h1>
+    <h1 class="header__logo">
+      <router-link :to="'/'"><Logo /></router-link>
+    </h1>
     <TheNavigation class="header__nav" />
   </header>
 </template>
@@ -27,15 +29,12 @@ export default {
     a {
       line-height: 1;
       text-decoration: none;
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
 
       &:hover {
-        opacity: .7;
+        opacity: 0.7;
       }
     }
-  }
-  &__nav {
-
   }
 }
 </style>

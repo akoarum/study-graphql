@@ -5,7 +5,10 @@
       <h1 class="post__title">{{ post.title }}</h1>
       <time :datetime="post.date" class="post__date">{{ post.date }}</time>
     </header>
-    <div v-html="post.content" class="post__content" />
+    <div class="post__content" v-html="post.content" />
+    <p>
+      今日のご飯：<i>{{ post.dish }}</i>
+    </p>
   </article>
 </template>
 
@@ -21,6 +24,7 @@ const getPost = gql`
       date
       uri
       content
+      dish
     }
   }
 `

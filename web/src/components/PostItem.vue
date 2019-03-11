@@ -1,6 +1,6 @@
 <template>
   <div class="postItem">
-    <router-link :to="{ name: 'blogDetail', params: { id }}">
+    <router-link :to="{ name: 'blogDetail', params: { id } }">
       <strong class="postItem__title">{{ title }}</strong>
       <time :datetime="date" class="postItem__date">{{ date }}</time>
     </router-link>
@@ -33,7 +33,7 @@ export default {
     padding: 18px 14px 18px;
     color: #242424;
     text-decoration: none;
-    transition: background .3s ease;
+    transition: background 0.3s ease;
 
     &:hover {
       background: #f4f4f4;

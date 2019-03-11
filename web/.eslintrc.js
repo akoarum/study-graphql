@@ -15,7 +15,8 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/component-name-in-template-casing': 'off',
     'vue/html-self-closing': 'off',
-    'vue/html-closing-bracket-spacing': 'off'
+    'vue/html-closing-bracket-spacing': 'off',
+    'vue/no-v-html': 'off'
   },
   parserOptions: {
     parser: "babel-eslint"
